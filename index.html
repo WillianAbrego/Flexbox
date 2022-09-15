@@ -16,12 +16,16 @@
         height: 30vh;
 
         display: flex;
+        /* flex inline-flex; */
         flex-direction: row-reverse;
         /*row | row-reverse | column | column-reverse | */
         flex-wrap: wrap-reverse;
         /*nowrap | wrap | wrap-reverse*/
-        flex-flow: column nowrap;
+        flex-flow: row-reverse wrap-reverse;
         /*es un shortcut de flexdirection y flex wrap*/
+        justify-content: space-evenly;
+        /*define la alineacion de los elementos hijos respecto del eje principal */
+        /* center | flex-end | space-between | space-around | space-evenly */
       }
       .item {
         border: medium solid #999;
