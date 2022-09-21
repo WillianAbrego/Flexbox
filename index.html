@@ -55,14 +55,25 @@
         Si la caja flexible tiene direccion de fila, flex-basis represeta el widht
         Si la caja flexible tiene direccion de columna, flex-basis represeta el height
         Valor por defecto auto*/
-        flex: 0 1 200px;
+        flex: 0 1 auto;
         /*Es un shordhand de las propiedades flex-grow flex-shrink y flex-basis, en ese orden*/
+        order: 0;
+        /*Representa el orden que tendran los elementos hijos en la caja flexbox
+        Valor por defecto 0
+        Se aceptan valores positivos y negativos
+        un valor menor siempre ira antes que un valor mayor*/
+        align-self: stretch;
+        /*stretch | flex-start | flex-end | center | baseline*/
+        /*Sobreescribe el valor de la propiedad align-items solo
+        para el elemento hijo especificado*/
       }
       .item:nth-child(2) {
+        order: 1;
         /* flex-grow: 3; */
-        flex-shrink: 2;
+        /* flex-shrink: 2; */
       }
       .item:nth-child(3) {
+        align-self: center;
         /* flex-grow: 2; */
       }
 
@@ -76,6 +87,8 @@
       <article class="item">Flex Item 1</article>
       <article class="item">Flex Item 2</article>
       <article class="item">Flex Item 3</article>
+      <article class="item">Flex Item 4</article>
+      <article class="item">Flex Item 5</article>
     </section>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <section class="container">
