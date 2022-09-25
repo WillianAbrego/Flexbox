@@ -30,6 +30,10 @@
         flex-direction: column;
         min-height: 100vh;
       }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
       main {
         flex-grow: 1;
       }
@@ -53,6 +57,14 @@
       .hero-image h1 {
         font-size: 5vw;
       }
+      .flex-responsive {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .flex-responsive-item {
+        border: thin solid orange;
+        flex: 1 1 200px;
+      }
       @media screen and (min-width: 1024px) {
         .header {
           display: flex;
@@ -64,6 +76,19 @@
         }
         .menu li {
           padding: 0.5rem;
+        }
+        .flex-container {
+          display: flex;
+          align-items: center;
+        }
+        .flex-item {
+          flex: 0 0 50%;
+        }
+        .flex-order-1 {
+          order: 1;
+        }
+        .flex-row-reverse {
+          flex-direction: row-reverse;
         }
       }
     </style>
@@ -82,12 +107,60 @@
       </nav>
     </header>
     <main>
-      <h2>Contenido</h2>
       <article class="hero-image">
         <div>
           <h1>Flexbox</h1>
         </div>
       </article>
+      <section class="flex-container flex-row-reverse">
+        <article class="flex-item">
+          <h2>Titulo</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            assumenda ullam magni eaque beatae, natus nihil minima sunt
+            asperiores magnam doloribus doloremque enim fugit? Quae placeat
+            dignissimos aliquid officia quam.
+          </p>
+        </article>
+        <article class="flex-item">
+          <img src="https://placeimg.com/400/400/people" />
+        </article>
+      </section>
+      <section class="flex-container">
+        <article class="flex-item">
+          <h2>Titulo</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            assumenda ullam magni eaque beatae, natus nihil minima sunt
+            asperiores magnam doloribus doloremque enim fugit? Quae placeat
+            dignissimos aliquid officia quam.
+          </p>
+        </article>
+        <article class="flex-item">
+          <img src="https://placeimg.com/400/400/archi" />
+        </article>
+      </section>
+      <section class="flex-responsive">
+        <article class="flex-responsive-item">imte Responsivo 1</article>
+        <article class="flex-responsive-item">imte Responsivo 2</article>
+        <article class="flex-responsive-item">imte Responsivo 3</article>
+        <article class="flex-responsive-item">imte Responsivo 4</article>
+        <article class="flex-responsive-item">imte Responsivo 5</article>
+        <article class="flex-responsive-item">imte Responsivo 6</article>
+        <article class="flex-responsive-item">imte Responsivo 7</article>
+        <article class="flex-responsive-item">imte Responsivo 8</article>
+        <article class="flex-responsive-item">imte Responsivo 9</article>
+        <article class="flex-responsive-item">imte Responsivo 10</article>
+        <article class="flex-responsive-item">imte Responsivo 11</article>
+        <article class="flex-responsive-item">imte Responsivo 12</article>
+        <article class="flex-responsive-item">imte Responsivo 13</article>
+        <article class="flex-responsive-item">imte Responsivo 14</article>
+        <article class="flex-responsive-item">imte Responsivo 15</article>
+        <article class="flex-responsive-item">imte Responsivo 16</article>
+        <article class="flex-responsive-item">imte Responsivo 17</article>
+        <article class="flex-responsive-item">imte Responsivo 18</article>
+        <article class="flex-responsive-item">imte Responsivo 19</article>
+      </section>
     </main>
     <footer class="titulares">
       <h2>Sticky Footer</h2>
